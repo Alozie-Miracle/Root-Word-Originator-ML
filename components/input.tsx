@@ -18,7 +18,7 @@ const Input = () => {
   const submit = () => {
       if (!word) return alert("Please send in an english word");
 
-      axios.post("http://localhost:8000/root", {
+      axios.post("https://root-word-originator-ml-backend.vercel.app/root", {
         word
       }).then(res => {
         console.log(res.data);
@@ -28,7 +28,7 @@ const Input = () => {
 
   const clickedWord = (text: string) => {
     setWord(text)
-    axios.post("http://localhost:8000/root", {
+    axios.post("https://root-word-originator-ml-backend.vercel.app/root", {
         word: text
       }).then(res => {
         console.log(res.data);
